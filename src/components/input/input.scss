@@ -1,0 +1,22 @@
+@use '../../styles/styles.scss' as *;
+
+.input {
+	@include flex(center, center);
+	margin-bottom: 3rem;
+
+	input {
+		border: 0;
+		background-color: black;
+		padding: 1rem 1.5rem;
+		font-size: 1rem;
+		border-radius: $border-radius;
+		color: $txt-clr;
+		font-family: Montserrat;
+		cursor: pointer;
+		width: 55%;
+	}
+	span {
+		position: relative;
+		left: -40px;
+	}
+}

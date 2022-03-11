@@ -1,0 +1,39 @@
+@use '../../styles/styles.scss' as *;
+
+.footer {
+	position: relative;
+	padding: 6rem 2rem;
+		background-position: top;
+		background-size: cover;
+		background-repeat: no-repeat;
+		.container {
+			@include flex(center, center);
+			flex-direction: column;
+			gap: 3rem;
+		}
+
+		&__content__links {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+
+			@include mobile {
+				grid-template-columns: repeat(2, auto);
+				grid-gap: 10px;
+
+			}
+		}
+		&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background-image: linear-gradient(
+			to bottom,
+			#0f0f0f,
+			rgba(0, 0, 0, 0)
+		);
+	}
+}
